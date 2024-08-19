@@ -3,4 +3,4 @@ project(MPointer)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MPointer main.cpp)
+add_executable(MPointer MPointer.cpp)
