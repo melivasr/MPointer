@@ -1,4 +1,5 @@
 #include "../headers/MPointer.h"
+#include "../doublyLinkedList/DoublyLinkedList.h"
 
 // Inicializar el recolector de basura
 template <typename T>
@@ -9,6 +10,22 @@ template <typename T>
 MPointer<T>::MPointer() : pointer(nullptr), id(-1), refCount(nullptr) {
     gc->addPointer(this);
 }
+
+// Constructor de copia
+template <typename T>
+MPointer<T>::MPointer(const MPointer<T>& other) {
+    pointer = other.pointer;
+    id = other.id;
+    refCount = other.refCount;
+    if (refCount) {
+        (*refCount)++;
+    }
+    gc->addPointer(this);
+}
+
+// Constructor que acepta nullptr
+template <typename T>
+MPointer<T>::MPointer(std::nullptr_t) : pointer(nullptr), id(-1), refCount(nullptr) {}
 
 // Destructor
 template <typename T>
@@ -44,7 +61,9 @@ MPointer<T>& MPointer<T>::operator=(const MPointer<T>& other) {
         this->pointer = other.pointer;  // Copiar la direccion de memoria
         this->id = other.id;
         this->refCount = other.refCount;
-        (*refCount)++;  // Contador de referencias
+        if (refCount) {
+            (*refCount)++;
+        }
     }
     return *this;
 }
@@ -60,6 +79,32 @@ MPointer<T>& MPointer<T>::operator=(const T& value) {
     return *this;  // Devolver el valor actual
 }
 
+// Sobrecarga del operador de asignación para nullptr
+template <typename T>
+MPointer<T>& MPointer<T>::operator=(std::nullptr_t) {
+    if (refCount && --(*refCount) == 0) {  // Si no hay más referencias, liberar memoria
+        delete pointer;
+        delete refCount;
+        gc->removePointer(this);
+    }
+    pointer = nullptr;
+    refCount = nullptr;
+    id = -1;
+    return *this;
+}
+
+// Sobrecarga del operador == para nullptr
+template <typename T>
+bool MPointer<T>::operator==(std::nullptr_t) const {
+    return pointer == nullptr;
+}
+
+// Sobrecarga del operador != para nullptr
+template <typename T>
+bool MPointer<T>::operator!=(std::nullptr_t) const {
+    return pointer != nullptr;
+}
+
 // Sobrecarga del operador * para acceder al valor almacenado
 template <typename T>
 T& MPointer<T>::operator*() {
@@ -72,10 +117,27 @@ T* MPointer<T>::operator&() {
     return pointer;
 }
 
+// Sobrecarga del operador -> para acceder a los miembros del puntero
+template <typename T>
+T* MPointer<T>::operator->() const {
+    return pointer;
+}
+
+// Sobrecarga de conversión a bool para evaluar si el puntero es válido
+template <typename T>
+MPointer<T>::operator bool() const {
+    return pointer != nullptr;
+}
+
 // Obtener el conteo de referencias
 template <typename T>
 int MPointer<T>::getRefCount() const {
-    return *refCount;
+    return refCount ? *refCount : 0;
 }
 
+// Instanciación explícita de la plantilla para el tipo int
 template class MPointer<int>;
+
+// Instanciación para DoublyLinkedList
+template class MPointer<DoublyLinkedList<int>::Node>;
+

@@ -67,6 +67,12 @@ build CMakeFiles/MPointer.dir/examples/main.cpp.o: CXX_COMPILER__MPointer_unscan
   OBJECT_DIR = CMakeFiles/MPointer.dir
   OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/examples
 
+build CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/doublyLinkedList/DoublyLinkedList.cpp || cmake_object_order_depends_target_MPointer
+  DEP_FILE = CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MPointer.dir
+  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/doublyLinkedList
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MPointer
@@ -75,7 +81,7 @@ build CMakeFiles/MPointer.dir/examples/main.cpp.o: CXX_COMPILER__MPointer_unscan
 #############################################
 # Link the executable MPointer
 
-build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/source/MPointer.cpp.o CMakeFiles/MPointer.dir/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o
+build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/source/MPointer.cpp.o CMakeFiles/MPointer.dir/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MPointer.dir
   POST_BUILD = :

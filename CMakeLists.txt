@@ -7,4 +7,6 @@ add_executable(MPointer source/MPointer.cpp
         source/MPointerGC.cpp
         headers/MPointerGC.h
         headers/MPointer.h
-        examples/main.cpp)
+        examples/main.cpp
+        doublyLinkedList/DoublyLinkedList.cpp
+        doublyLinkedList/DoublyLinkedList.h)

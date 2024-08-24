@@ -1,5 +1,5 @@
 #include "../headers/MPointerGC.h"
-#include "../headers/MPointer.h"
+#include "../doublyLinkedList/DoublyLinkedList.h"
 
 // Inicializar el recolector de basura
 template <typename T>
@@ -32,7 +32,7 @@ void MPointerGC<T>::removePointer(MPointer<T>* mp) {
     pointers.remove(mp);
 }
 
-// Ejecutar el recolector de basura de manera periodica para liberar memoria
+// Ejecutar el recolector de basura de manera periódica para liberar memoria
 template <typename T>
 void MPointerGC<T>::runGC() {
     while (true) {
@@ -50,3 +50,5 @@ void MPointerGC<T>::runGC() {
 }
 
 template class MPointerGC<int>;
+
+template class MPointerGC<DoublyLinkedList<int>::Node>;
