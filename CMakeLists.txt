@@ -11,4 +11,5 @@ add_executable(MPointer library/source/MPointer.cpp
         library/doublyLinkedList/DoublyLinkedList.cpp
         library/doublyLinkedList/DoublyLinkedList.h
         library/sortingAlgorithms/BubbleSort.cpp
-        library/sortingAlgorithms/sortingAlgorithms.h)
+        library/sortingAlgorithms/sortingAlgorithms.h
+        library/sortingAlgorithms/InsertionSort.cpp)

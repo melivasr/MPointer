@@ -11,9 +11,16 @@ public:
     virtual ~SortingAlgorithm() = default;
 };
 
-// Implementación de Bubble Sort
+//Bubble Sort
 template <typename T>
 class BubbleSort : public SortingAlgorithm<T> {
+public:
+    void sort(DoublyLinkedList<T>& list) override;
+};
+
+//Insertion Sort
+template <typename T>
+class InsertionSort : public SortingAlgorithm<T> {
 public:
     void sort(DoublyLinkedList<T>& list) override;
 };

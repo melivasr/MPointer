@@ -79,6 +79,12 @@ build CMakeFiles/MPointer.dir/library/sortingAlgorithms/BubbleSort.cpp.o: CXX_CO
   OBJECT_DIR = CMakeFiles/MPointer.dir
   OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/library/sortingAlgorithms
 
+build CMakeFiles/MPointer.dir/library/sortingAlgorithms/InsertionSort.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/sortingAlgorithms/InsertionSort.cpp || cmake_object_order_depends_target_MPointer
+  DEP_FILE = CMakeFiles/MPointer.dir/library/sortingAlgorithms/InsertionSort.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MPointer.dir
+  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/library/sortingAlgorithms
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MPointer
@@ -87,7 +93,7 @@ build CMakeFiles/MPointer.dir/library/sortingAlgorithms/BubbleSort.cpp.o: CXX_CO
 #############################################
 # Link the executable MPointer
 
-build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/library/source/MPointer.cpp.o CMakeFiles/MPointer.dir/library/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o CMakeFiles/MPointer.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o CMakeFiles/MPointer.dir/library/sortingAlgorithms/BubbleSort.cpp.o
+build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/library/source/MPointer.cpp.o CMakeFiles/MPointer.dir/library/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o CMakeFiles/MPointer.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o CMakeFiles/MPointer.dir/library/sortingAlgorithms/BubbleSort.cpp.o CMakeFiles/MPointer.dir/library/sortingAlgorithms/InsertionSort.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MPointer.dir
   POST_BUILD = :
