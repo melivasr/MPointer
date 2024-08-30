@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.28)
-project(headers)
+project(library/headers)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MPointer source/MPointer.cpp
-        source/MPointerGC.cpp
-        headers/MPointerGC.h
-        headers/MPointer.h
+add_executable(MPointer library/source/MPointer.cpp
+        library/source/MPointerGC.cpp
+        library/headers/MPointerGC.h
+        library/headers/MPointer.h
         examples/main.cpp
-        doublyLinkedList/DoublyLinkedList.cpp
-        doublyLinkedList/DoublyLinkedList.h)
+        library/doublyLinkedList/DoublyLinkedList.cpp
+        library/doublyLinkedList/DoublyLinkedList.h)

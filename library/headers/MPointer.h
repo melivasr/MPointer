@@ -8,7 +8,6 @@ class MPointer {
 private:
     T* pointer;  // Puntero al tipo de dato almacenado
     int id;      // Identificador único para el MPointer
-    int* refCount;  // Contador de referencias
     static MPointerGC<T>* gc;  // Instancia del recolector de basura para MPointers
 
 public:
@@ -17,7 +16,7 @@ public:
     MPointer(std::nullptr_t);  // Constructor que acepta nullptr
     ~MPointer();  // Destructor
 
-    // Método para crear un nuevo MPointer
+    // Metodo para crear un nuevo MPointer
     static MPointer<T> New();
 
     // Sobrecarga de operadores
@@ -28,17 +27,14 @@ public:
     bool operator==(std::nullptr_t) const;
     bool operator!=(std::nullptr_t) const;
 
-    T& operator*();
-    T* operator&();
+    T* operator& ();
+    T& operator*() const;
 
-    // Sobrecarga del operador -> para acceder a los miembros del puntero
     T* operator->() const;
 
-    // Sobrecarga a bool para evaluar si el puntero es válido
     operator bool() const;
 
-    // Obtener el conteo de referencias del MPointer
-    int getRefCount() const;
+    int getId() const;
 };
 
 #endif // MPOINTER_H

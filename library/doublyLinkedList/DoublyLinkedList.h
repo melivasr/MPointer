@@ -3,6 +3,8 @@
 
 #include "../headers/MPointer.h"
 
+#include <iostream>
+
 template <typename T>
 class DoublyLinkedList {
 private:
@@ -11,12 +13,15 @@ private:
         MPointer<Node> next;
         MPointer<Node> prev;
 
-        // Constructor por defecto
         Node() : data(nullptr), next(nullptr), prev(nullptr) {}
-
-        // Constructor que inicializa con un valor
         Node(T value) : data(MPointer<T>::New()), next(nullptr), prev(nullptr) {
             *data = value;
+        }
+
+        // Sobrecarga del operador << para Node
+        friend std::ostream& operator<<(std::ostream& os, const Node& node) {
+            os << *(node.data); // Imprimir el valor almacenado en el MPointer
+            return os;
         }
     };
 

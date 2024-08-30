@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: headers
+# Project: library/headers
 # Configurations: Debug
 # =============================================================================
 
@@ -49,17 +49,17 @@ cmake_ninja_workdir = /home/mvasquezr/DatosII/MPointer/cmake-build-debug/
 
 build cmake_object_order_depends_target_MPointer: phony || CMakeFiles/MPointer.dir
 
-build CMakeFiles/MPointer.dir/source/MPointer.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/source/MPointer.cpp || cmake_object_order_depends_target_MPointer
-  DEP_FILE = CMakeFiles/MPointer.dir/source/MPointer.cpp.o.d
+build CMakeFiles/MPointer.dir/library/source/MPointer.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/source/MPointer.cpp || cmake_object_order_depends_target_MPointer
+  DEP_FILE = CMakeFiles/MPointer.dir/library/source/MPointer.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/MPointer.dir
-  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/source
+  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/library/source
 
-build CMakeFiles/MPointer.dir/source/MPointerGC.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/source/MPointerGC.cpp || cmake_object_order_depends_target_MPointer
-  DEP_FILE = CMakeFiles/MPointer.dir/source/MPointerGC.cpp.o.d
+build CMakeFiles/MPointer.dir/library/source/MPointerGC.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/source/MPointerGC.cpp || cmake_object_order_depends_target_MPointer
+  DEP_FILE = CMakeFiles/MPointer.dir/library/source/MPointerGC.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/MPointer.dir
-  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/source
+  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/library/source
 
 build CMakeFiles/MPointer.dir/examples/main.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/examples/main.cpp || cmake_object_order_depends_target_MPointer
   DEP_FILE = CMakeFiles/MPointer.dir/examples/main.cpp.o.d
@@ -67,11 +67,11 @@ build CMakeFiles/MPointer.dir/examples/main.cpp.o: CXX_COMPILER__MPointer_unscan
   OBJECT_DIR = CMakeFiles/MPointer.dir
   OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/examples
 
-build CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/doublyLinkedList/DoublyLinkedList.cpp || cmake_object_order_depends_target_MPointer
-  DEP_FILE = CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o.d
+build CMakeFiles/MPointer.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o: CXX_COMPILER__MPointer_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/doublyLinkedList/DoublyLinkedList.cpp || cmake_object_order_depends_target_MPointer
+  DEP_FILE = CMakeFiles/MPointer.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/MPointer.dir
-  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/doublyLinkedList
+  OBJECT_FILE_DIR = CMakeFiles/MPointer.dir/library/doublyLinkedList
 
 
 # =============================================================================
@@ -81,7 +81,7 @@ build CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o: CXX_COMPI
 #############################################
 # Link the executable MPointer
 
-build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/source/MPointer.cpp.o CMakeFiles/MPointer.dir/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o CMakeFiles/MPointer.dir/doublyLinkedList/DoublyLinkedList.cpp.o
+build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/library/source/MPointer.cpp.o CMakeFiles/MPointer.dir/library/source/MPointerGC.cpp.o CMakeFiles/MPointer.dir/examples/main.cpp.o CMakeFiles/MPointer.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MPointer.dir
   POST_BUILD = :
