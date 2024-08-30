@@ -7,7 +7,7 @@
 
 template <typename T>
 class DoublyLinkedList {
-private:
+public:
     struct Node {
         MPointer<T> data;
         MPointer<Node> next;
@@ -17,6 +17,11 @@ private:
         Node(T value) : data(MPointer<T>::New()), next(nullptr), prev(nullptr) {
             *data = value;
         }
+
+        // Métodos de acceso para `next` y `prev`
+        MPointer<Node> getNext() const { return next; }
+        MPointer<Node> getPrev() const { return prev; }
+        MPointer<T> getData() const { return data; }
 
         // Sobrecarga del operador << para Node
         friend std::ostream& operator<<(std::ostream& os, const Node& node) {
@@ -28,7 +33,6 @@ private:
     MPointer<Node> head;
     MPointer<Node> tail;
 
-public:
     DoublyLinkedList();
     ~DoublyLinkedList();
     void append(T value);
@@ -36,6 +40,10 @@ public:
     void remove(T value);
     void display() const;
     bool isEmpty() const;
+
+    // Métodos de acceso para head y tail
+    MPointer<Node> getHead() const { return head; }
+    MPointer<Node> getTail() const { return tail; }
 };
 
 #endif // DOUBLYLINKEDLIST_H
