@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: library/headers
+# Project: MPointerProject
 # Configurations: Debug
 # =============================================================================
 
@@ -101,6 +101,86 @@ build MPointer: CXX_EXECUTABLE_LINKER__MPointer_Debug CMakeFiles/MPointer.dir/li
   TARGET_FILE = MPointer
   TARGET_PDB = MPointer.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target runTests
+
+
+#############################################
+# Order-only phony target for runTests
+
+build cmake_object_order_depends_target_runTests: phony || CMakeFiles/runTests.dir
+
+build CMakeFiles/runTests.dir/tests/MPointerTest.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/tests/MPointerTest.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/tests/MPointerTest.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/tests
+
+build CMakeFiles/runTests.dir/library/source/MPointer.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/source/MPointer.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/library/source/MPointer.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/library/source
+
+build CMakeFiles/runTests.dir/library/source/MPointerGC.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/source/MPointerGC.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/library/source/MPointerGC.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/library/source
+
+build CMakeFiles/runTests.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/doublyLinkedList/DoublyLinkedList.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/library/doublyLinkedList
+
+build CMakeFiles/runTests.dir/library/sortingAlgorithms/BubbleSort.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/sortingAlgorithms/BubbleSort.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/library/sortingAlgorithms/BubbleSort.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/library/sortingAlgorithms
+
+build CMakeFiles/runTests.dir/library/sortingAlgorithms/InsertionSort.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/library/sortingAlgorithms/InsertionSort.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/library/sortingAlgorithms/InsertionSort.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/library/sortingAlgorithms
+
+build CMakeFiles/runTests.dir/tests/MPointerGCTest.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/tests/MPointerGCTest.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/tests/MPointerGCTest.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/tests
+
+build CMakeFiles/runTests.dir/tests/DoublyLinkedListTest.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/tests/DoublyLinkedListTest.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/tests/DoublyLinkedListTest.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/tests
+
+build CMakeFiles/runTests.dir/tests/SortingAlgorithmsTest.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/mvasquezr/DatosII/MPointer/tests/SortingAlgorithmsTest.cpp || cmake_object_order_depends_target_runTests
+  DEP_FILE = CMakeFiles/runTests.dir/tests/SortingAlgorithmsTest.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = CMakeFiles/runTests.dir/tests
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target runTests
+
+
+#############################################
+# Link the executable runTests
+
+build runTests: CXX_EXECUTABLE_LINKER__runTests_Debug CMakeFiles/runTests.dir/tests/MPointerTest.cpp.o CMakeFiles/runTests.dir/library/source/MPointer.cpp.o CMakeFiles/runTests.dir/library/source/MPointerGC.cpp.o CMakeFiles/runTests.dir/library/doublyLinkedList/DoublyLinkedList.cpp.o CMakeFiles/runTests.dir/library/sortingAlgorithms/BubbleSort.cpp.o CMakeFiles/runTests.dir/library/sortingAlgorithms/InsertionSort.cpp.o CMakeFiles/runTests.dir/tests/MPointerGCTest.cpp.o CMakeFiles/runTests.dir/tests/DoublyLinkedListTest.cpp.o CMakeFiles/runTests.dir/tests/SortingAlgorithmsTest.cpp.o | /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a
+  FLAGS = -g
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a  -lpthread
+  OBJECT_DIR = CMakeFiles/runTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = runTests
+  TARGET_PDB = runTests.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -135,7 +215,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/mvasquezr/DatosII/MPointer/cmake-build-debug
 
-build all: phony MPointer
+build all: phony MPointer runTests
 
 # =============================================================================
 # Built-in targets
@@ -144,14 +224,14 @@ build all: phony MPointer
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/mvasquezr/DatosII/MPointer/CMakeLists.txt /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/mvasquezr/DatosII/MPointer/CMakeLists.txt /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGTest.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/GoogleTest.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/mvasquezr/DatosII/MPointer/CMakeLists.txt /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/mvasquezr/DatosII/MPointer/CMakeLists.txt /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGTest.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/GoogleTest.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /opt/CLion/clion-2024.1.4/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -1,3 +1,4 @@
 /home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/MPointer.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/runTests.dir
 /home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

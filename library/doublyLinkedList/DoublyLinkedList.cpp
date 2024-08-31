@@ -11,8 +11,16 @@ DoublyLinkedList<T>::~DoublyLinkedList() {
     while (head) {
         MPointer<Node> temp = head;
         head = head->next;
-        // El recolector de basura maneja la eliminación del nodo
+        // Ensure to nullify pointers to help the garbage collector
+        if (head) {
+            head->prev = nullptr;
+        }
+        temp->next = nullptr;
+        temp->prev = nullptr;
+        // The garbage collector should manage the deletion
     }
+    head = nullptr;
+    tail = nullptr;
 }
 
 // Agregar al final de la lista

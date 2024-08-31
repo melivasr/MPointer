@@ -2,7 +2,6 @@
 #define DOUBLYLINKEDLIST_H
 
 #include "../headers/MPointer.h"
-
 #include <iostream>
 
 template <typename T>
@@ -47,4 +46,3 @@ public:
 };
 
 #endif // DOUBLYLINKEDLIST_H
-
