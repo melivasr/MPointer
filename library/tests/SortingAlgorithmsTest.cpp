@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "../library/sortingAlgorithms/sortingAlgorithms.h"
+#include "../sortingAlgorithms/sortingAlgorithms.h"
 
 TEST(SortingAlgorithmsTest, BubbleSort) {
     DoublyLinkedList<int> list;

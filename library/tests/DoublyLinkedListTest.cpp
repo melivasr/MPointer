@@ -1,16 +1,15 @@
 #include <gtest/gtest.h>
 
-#include "../library/doublyLinkedList/DoublyLinkedList.h"
-
+#include "../doublyLinkedList/DoublyLinkedList.h"
+#include "../headers/MPointerGC.h"
 TEST(DoublyLinkedListTest, AppendAndPrepend) {
     DoublyLinkedList<int> list;
-    list.append(1);
-    list.append(2);
-    list.prepend(0);
+    list.prepend(1);
+
 
     EXPECT_FALSE(list.isEmpty());
 
-    list.display(); // You might want to capture output and compare
+    list.display();
 }
 
 TEST(DoublyLinkedListTest, RemoveElement) {

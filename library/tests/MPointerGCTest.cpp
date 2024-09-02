@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../library/headers/MPointer.h"
-#include "../library/headers/MPointerGC.h"
+#include "../headers/MPointer.h"
+#include "../headers/MPointerGC.h"
 
 TEST(MPointerGCTest, InstanceManagement) {
     MPointer<int> ptr1 = MPointer<int>::New();
@@ -21,6 +21,6 @@ TEST(MPointerGCTest, ReferenceCounting) {
     EXPECT_EQ(*ptr1, 200);
     EXPECT_EQ(*ptr2, 200);
 
-    ptr2 = nullptr; // Decrement reference count
+    ptr2 = nullptr;
     MPointerGC<int>::getInstance()->debug();
 }
