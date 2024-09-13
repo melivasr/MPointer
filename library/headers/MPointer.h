@@ -4,6 +4,9 @@
 #include "MPointerGC.h"
 
 template <typename T>
+class MPointerGC;
+
+template <typename T>
 class MPointer {
 private:
     T* pointer;  // Puntero al tipo de dato almacenado
@@ -36,5 +39,6 @@ public:
 
     int getId() const;
 };
+
 
 #endif // MPOINTER_H
