@@ -4,6 +4,7 @@
 #include <iostream>
 #include "MPointer.h"
 
+// Declaración anticipada de MPointer para evitar dependencias
 template <typename T>
 class MPointer;
 

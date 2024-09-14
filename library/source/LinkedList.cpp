@@ -1,5 +1,7 @@
 #include "../headers/LinkedList.h"
 
+#include "../../app/doublyLinkedList/DoublyLinkedList.h"
+
 // Constructor
 template <typename T>
 LinkedList<T>::LinkedList() : head(nullptr), tail(nullptr) {}
@@ -74,3 +76,4 @@ template class LinkedList<MPointer<int>>;
 template class LinkedList<MPointer<typename LinkedList<int>::Node>>;
 template class LinkedList<MPointer<double>>;
 template class LinkedList<MPointer<std::string>>;
+template class LinkedList<MPointer<typename DoublyLinkedList<int>::Node>>;

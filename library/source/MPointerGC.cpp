@@ -1,17 +1,19 @@
 #include "../../library/headers/MPointer.h"
 #include "../../library/headers/MPointerGC.h"
 #include "../headers/LinkedList.h"
+#include "../../app/doublyLinkedList/DoublyLinkedList.h"
 
 #include <iostream>
 
-
+// Inicialización de la instancia de MPointerGC a nullptr
 template <typename T>
 MPointerGC<T>* MPointerGC<T>::instance = nullptr;
 
+// Constructor que inicia el recolector de basura en un hilo separado
 template <typename T>
-MPointerGC<T>::MPointerGC() : running(true), nextId(0), gcThread(&MPointerGC<T>::runGC, this) {
-}
+MPointerGC<T>::MPointerGC() : running(true), nextId(0), gcThread(&MPointerGC<T>::runGC, this) {}
 
+// Destructor que detiene el recolector de basura
 template <typename T>
 MPointerGC<T>::~MPointerGC() {
     running = false;
@@ -20,6 +22,7 @@ MPointerGC<T>::~MPointerGC() {
     }
 }
 
+// Obtiene la instancia única de MPointerGC (patrón singleton)
 template <typename T>
 MPointerGC<T>* MPointerGC<T>::getInstance() {
     if (!instance) {
@@ -28,31 +31,35 @@ MPointerGC<T>* MPointerGC<T>::getInstance() {
     return instance;
 }
 
+// Genera un nuevo ID único
 template <typename T>
 int MPointerGC<T>::generateId() {
     std::lock_guard<std::mutex> lock(mtx);
     return nextId++;
 }
 
+// Agrega un MPointer a la lista de punteros a gestionar
 template <typename T>
 void MPointerGC<T>::addPointer(MPointer<T>* mp) {
-    std::lock_guard<std::mutex> lock(mtx);  // Asegura acceso exclusivo a la lista
-    pointersList.add(mp);  // Agrega el puntero MPointer<T> a la lista doblemente enlazada
+    std::lock_guard<std::mutex> lock(mtx);  // Asegura acceso exclusivo
+    pointersList.add(mp);
 }
 
-
+// Remueve un MPointer de la lista usando su ID
 template <typename T>
 void MPointerGC<T>::removePointer(int id) {
     std::lock_guard<std::mutex> lock(mtx);
     auto node = pointersList.getHead();
     while (node != nullptr) {
         if (node->data->getId() == id) {
-            pointersList.remove(node);  // Elimina el nodo de la lista
+            pointersList.remove(node);  // Elimina el nodo
             break;
         }
         node = node->next;
     }
 }
+
+// Incrementa el contador de referencias de un MPointer
 template <typename T>
 void MPointerGC<T>::incrementRefCount(int id) {
     std::lock_guard<std::mutex> lock(mtx);
@@ -60,26 +67,23 @@ void MPointerGC<T>::incrementRefCount(int id) {
     while (node != nullptr) {
         if (node->data->getId() == id) {
             node->refCount++;
-            std::cout << "Incrementando referencia del ID: " << id << ", nuevo refCount: " << node->refCount << std::endl;
             break;
         }
         node = node->next;
     }
 }
 
+// Decrementa el contador de referencias y elimina si llega a 0
 template <typename T>
 void MPointerGC<T>::decrementRefCount(int id) {
     std::lock_guard<std::mutex> lock(mtx);
     auto node = pointersList.getHead();
     while (node != nullptr) {
         if (node->data->getId() == id) {
-            node->refCount--;  // Decrementa el contador de referencias
-            if (node->refCount == 0) {  // Solo elimina si el contador llega a 0
-                std::cout << "Referencia del ID: " << id << " llegó a 0, eliminando nodo" << std::endl;
-                delete node->data;  // Libera la memoria del MPointer
-                pointersList.remove(node);  // Elimina el nodo de la lista
-            } else {
-                std::cout << "Decrementando referencia del ID: " << id << ", refCount actual: " << node->refCount << std::endl;
+            node->refCount--;
+            if (node->refCount == 0) {
+                delete node->data;  // Libera la memoria
+                pointersList.remove(node);  // Elimina el nodo
             }
             break;
         }
@@ -87,20 +91,23 @@ void MPointerGC<T>::decrementRefCount(int id) {
     }
 }
 
+// Muestra información de los MPointer gestionados
 template <typename T>
 void MPointerGC<T>::debug() {
     std::lock_guard<std::mutex> lock(mtx);
     auto node = pointersList.getHead();
+
     while (node != nullptr) {
-        std::cout << "ID: " << node->data->getId()
-                  << " Value: " << **node->data
+        std::cout << "ID: " << node->data->getId()  // Muestra ID, valor y contador de referencias
+                  << " Value: " << *node->data
                   << " RefCount: " << node->refCount
-                  << " Address: " << node->data->operator&()
+                  << " Address: " << &(*node->data)
                   << std::endl;
         node = node->next;
     }
 }
 
+// Hilo del recolector de basura que elimina MPointers con refCount 0
 template <typename T>
 void MPointerGC<T>::runGC(MPointerGC* mp){
     while (mp->running) {
@@ -109,10 +116,10 @@ void MPointerGC<T>::runGC(MPointerGC* mp){
         auto node = mp->pointersList.getHead();
         while (node != nullptr) {
             if (node->refCount == 0) {
-                delete node->data;
-                auto temp = node->next;  // Guardar el siguiente nodo antes de eliminar
-                mp->pointersList.remove(node);
-                node = temp;  // Continuar con el siguiente nodo
+                delete node->data;  // Libera la memoria
+                auto temp = node->next;
+                mp->pointersList.remove(node);  // Elimina el nodo
+                node = temp;
             } else {
                 node = node->next;
             }
@@ -120,7 +127,9 @@ void MPointerGC<T>::runGC(MPointerGC* mp){
     }
 }
 
+// Instanciaciones explícitas
 template class MPointerGC<int>;
 template class MPointerGC<LinkedList<int>::Node>;
 template class MPointerGC<double>;
 template class MPointerGC<std::string>;
+template class MPointerGC<DoublyLinkedList<int>::Node>;

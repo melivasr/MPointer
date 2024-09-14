@@ -1,4 +1,12 @@
-/home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/MPointer.dir
-/home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/runTests.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/test.dir
 /home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/mvasquezr/DatosII/MPointer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/library/CMakeFiles/MPointerLibrary.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/library/CMakeFiles/runTests.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/library/CMakeFiles/test.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/library/CMakeFiles/edit_cache.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/library/CMakeFiles/rebuild_cache.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/app/CMakeFiles/MPointerApp.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/app/CMakeFiles/test.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/app/CMakeFiles/edit_cache.dir
+/home/mvasquezr/DatosII/MPointer/cmake-build-debug/app/CMakeFiles/rebuild_cache.dir
