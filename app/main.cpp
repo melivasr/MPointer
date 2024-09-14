@@ -51,6 +51,7 @@ int main() {
     std::cout << "Lista ordenada con Quick Sort:" << std::endl;
     list.display();
 
+
     // Pruebas adicionales para verificar el manejo de MPointer
     MPointer<int> myPtr = MPointer<int>::New();
     *myPtr = 42;

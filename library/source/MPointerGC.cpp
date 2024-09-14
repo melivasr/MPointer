@@ -133,6 +133,7 @@ template class MPointerGC<LinkedList<int>::Node>;
 template class MPointerGC<double>;
 template class MPointerGC<std::string>;
 template class MPointerGC<DoublyLinkedList<int>::Node>;
+
 template class MPointerGC<long>;
 template class MPointerGC<bool>;
 template class MPointerGC<float>;

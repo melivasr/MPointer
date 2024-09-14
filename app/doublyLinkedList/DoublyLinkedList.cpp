@@ -74,7 +74,6 @@ void DoublyLinkedList<T>::remove(T value) {
     }
     std::cerr << "Valor no encontrado en la lista." << std::endl;
 }
-
 // Muestra los elementos de la lista en una sola línea, separados por comas
 template <typename T>
 void DoublyLinkedList<T>::display() const {

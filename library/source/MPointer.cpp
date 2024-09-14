@@ -126,6 +126,7 @@ template class MPointer<LinkedList<int>::Node>;
 template class MPointer<double>;
 template class MPointer<std::string>;
 template class MPointer<DoublyLinkedList<int>::Node>;
+
 template class MPointer<long>;
 template class MPointer<bool>;
 template class MPointer<float>;
