@@ -77,3 +77,8 @@ template class LinkedList<MPointer<typename LinkedList<int>::Node>>;
 template class LinkedList<MPointer<double>>;
 template class LinkedList<MPointer<std::string>>;
 template class LinkedList<MPointer<typename DoublyLinkedList<int>::Node>>;
+
+template class LinkedList<MPointer<long>>;
+template class LinkedList<MPointer<bool>>;
+template class LinkedList<MPointer<float>>;
+template class LinkedList<MPointer<char>>;

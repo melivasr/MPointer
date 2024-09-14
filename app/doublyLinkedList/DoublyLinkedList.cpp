@@ -75,14 +75,20 @@ void DoublyLinkedList<T>::remove(T value) {
     std::cerr << "Valor no encontrado en la lista." << std::endl;
 }
 
-// Muestra los elementos de la lista.
+// Muestra los elementos de la lista en una sola línea, separados por comas
 template <typename T>
 void DoublyLinkedList<T>::display() const {
     MPointer<Node> current = head;
+    bool first = true;  // Para controlar si es el primer elemento
     while (current != nullptr) {
-        std::cout << "Valor: " << current->data << std::endl;
+        if (!first) {
+            std::cout << ", ";  // Imprimir una coma antes de cada elemento, excepto el primero
+        }
+        std::cout << current->data;
+        first = false;  // A partir del primer elemento, cambia el flag
         current = current->next;
     }
+    std::cout << std::endl;  // Nueva línea al final
 }
 
 // Devuelve el valor en el índice especificado.

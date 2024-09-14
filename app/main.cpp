@@ -52,13 +52,31 @@ int main() {
     list.display();
 
     // Pruebas adicionales para verificar el manejo de MPointer
-    MPointer<int> testPointer = MPointer<int>::New();
-    *testPointer = 42;
-    std::cout << "Valor de testPointer: " << *testPointer << std::endl;
+    MPointer<int> myPtr = MPointer<int>::New();
+    *myPtr = 42;
+    std::cout << "Valor de myPtr: " << *myPtr << std::endl;
 
     // Simulación de uso de múltiples referencias a MPointer
-    MPointer<int> testPointer2 = testPointer;
-    std::cout << "Valor de testPointer2 (copia de testPointer): " << *testPointer2 << std::endl;
+    MPointer<int> myPtr2 = myPtr;
+    std::cout << "Valor de myPtr2 (copia de myPtr): " << *myPtr2 << std::endl;
+
+    // Pruebas adicionales para verificar el manejo de MPointer con otros tipos de datos
+    MPointer<long> ptrLong = MPointer<long>::New();
+    *ptrLong = 1000000L;
+    std::cout << "Valor de ptrLong: " << *ptrLong << std::endl;
+
+    MPointer<float> ptrFloat = MPointer<float>::New();
+    *ptrFloat = 3.14f;
+    std::cout << "Valor de ptrFloat: " << *ptrFloat << std::endl;
+
+    MPointer<char> ptrChar = MPointer<char>::New();
+    *ptrChar = 'A';
+    std::cout << "Valor de ptrChar: " << *ptrChar << std::endl;
+
+    MPointer<bool> ptrBool = MPointer<bool>::New();
+    *ptrBool = true;
+    std::cout << "Valor de ptrBool: " << (*ptrBool ? "true" : "false") << std::endl;
+
 
     return 0;
 }
